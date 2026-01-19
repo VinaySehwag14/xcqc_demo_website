@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { motion, useScroll, useMotionValueEvent } from 'framer-motion';
+import { useScroll, useMotionValueEvent } from 'framer-motion';
 
 const Header = () => {
     const [isScrolled, setIsScrolled] = useState(false);
