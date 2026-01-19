@@ -64,7 +64,7 @@ const Hero = () => {
                 {/* Logo in normal flow, below buttons */}
                 <motion.div
                     style={{ y, scale, opacity }}
-                    className="fixed top-1/2 left-1/2 -translate-x-1/2 translate-y-1/3 z-10 w-full max-w-lg pointer-events-none"
+                    className="fixed top-1/2 left-1/2 -translate-x-1/2 translate-y-1/2 z-50 w-full max-w-lg pointer-events-none"
                     initial={{ opacity: 0, scale: 0.9 }}
                     animate={{ opacity: 1, scale: 1 }}
                     transition={{ duration: 1, delay: 0.3, ease: [0.22, 1, 0.36, 1] }}
