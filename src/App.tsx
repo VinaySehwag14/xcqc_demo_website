@@ -26,21 +26,23 @@ function App() {
   }, []);
 
   return (
-    <main className="bg-charcoal-void min-h-screen text-white selection:bg-sony-blue selection:text-white">
+    <>
       <Header />
-      <Hero />
+      <main className="bg-charcoal-void min-h-screen text-white selection:bg-sony-blue selection:text-white">
+        <Hero />
 
-      <ScrollSequence />
+        <ScrollSequence />
 
-      <section className="h-screen flex items-center justify-center relative z-10 bg-charcoal-void">
-        <div className="text-center">
-          <h2 className="text-4xl font-light tracking-wide mb-6">Experience the Future</h2>
-          <button className="px-8 py-3 bg-sony-blue hover:bg-black border border-sony-blue hover:border-white transition-all duration-300 rounded-full text-white font-medium tracking-wide">
-            Pre-Order Now
-          </button>
-        </div>
-      </section>
-    </main>
+        <section className="h-screen flex items-center justify-center relative z-10 bg-charcoal-void">
+          <div className="text-center">
+            <h2 className="text-4xl font-light tracking-wide mb-6">Experience the Future</h2>
+            <button className="px-8 py-3 bg-sony-blue hover:bg-black border border-sony-blue hover:border-white transition-all duration-300 rounded-full text-white font-medium tracking-wide">
+              Pre-Order Now
+            </button>
+          </div>
+        </section>
+      </main>
+    </>
   );
 }
 
