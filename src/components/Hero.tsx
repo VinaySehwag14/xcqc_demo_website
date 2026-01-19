@@ -17,15 +17,13 @@ const Hero = () => {
     // ensuring the user is mostly done with the white section.
     // The laptop (next section) starts appearing.
 
-    // Adjusted ranges for new lower position
-    // Since it starts lower (83%), it meets the laptop sooner.
-    // We drop it less (200px) and fade it earlier/faster.
-    const y = useTransform(scrollYProgress, [0.7, 1], [0, 200]);
-    // Scale down continuously from the start (0) until it fades out (0.75)
-    // This gives the "scale down from start" behavior.
-    const scale = useTransform(scrollYProgress, [0, 0.75], [1, 0.5]);
-    // Adjusted fade to match specific user coordinates (y~25px, scale~0.88)
-    const opacity = useTransform(scrollYProgress, [0.7, 0.75], [1, 0]);
+    // Animation to make logo appear to go INTO the laptop
+    // Move logo down significantly (400px) so it travels toward the laptop
+    const y = useTransform(scrollYProgress, [0.7, 1], [0, 400]);
+    // Scale down more aggressively to create depth illusion (to 0.3)
+    const scale = useTransform(scrollYProgress, [0, 1], [1, 0.3]);
+    // Fade out at ~0.74 scroll progress (when y≈53px, scale≈0.48)
+    const opacity = useTransform(scrollYProgress, [0.74, 0.76], [1, 0]);
 
     return (
         <section ref={containerRef} className="min-h-screen bg-white text-black flex flex-col items-center justify-center relative overflow-hidden py-10">
